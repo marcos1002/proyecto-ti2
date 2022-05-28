@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.342bf0b1.css","mappings":"oGAEA,KACE,SAGF,SACE","sources":["styles/index.scss"],"sourcesContent":["@import url(\"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700\");\r\n\r\nbody {\r\n  margin: 0;\r\n}\r\n\r\n.bg-gray {\r\n  background-color: #f0f2f5;\r\n}"],"names":[],"sourceRoot":""}
