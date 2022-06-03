@@ -14,6 +14,19 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/:id/card', async (req, res) => {
+  try {
+    const { id } = req.params;
+    await usersService.generatePdf(id);
+    return res.status(200).send();
+  }
+  catch (err) {
+    return res.status(400).json({
+      message: err.message
+    });
+  }
+});
+
 router.get('/:id/:file', async (req, res) => {
   try {
     const { id, file } = req.params;
@@ -35,8 +48,8 @@ router.get('/:id/:file', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const user = await usersService.insert(req.body, req.files);
-    return res.status(201).json(user);
+    await usersService.insert(req.body, req.files);
+    return res.status(201).send();
   }
   catch (err) {
     return res.status(400).json({

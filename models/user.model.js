@@ -5,6 +5,7 @@ module.exports = new Schema({
   lastName: String,
   email: String,
   password: String,
+  curpText: String,
   ine: Buffer,
   curp: Buffer,
   photo: Buffer,
